@@ -1,12 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import { ChakraProvider } from "@chakra-ui/react";
 
-function App() {
-  return (
-    <div className="App">
-      <div>Homepage</div>
-    </div>
-  );
-}
 
+    function App() {
+      return (
+        <ChakraProvider>
+          <AlertProvider>
+            <main>
+              <Header />
+              <Nav />
+              <Main />
+              <Contactme />
+              <Footer />
+            </main>
+          </AlertProvider>
+        </ChakraProvider>
+      );
+    }
+    
 export default App;
