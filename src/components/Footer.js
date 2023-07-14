@@ -14,7 +14,8 @@ const Footer = () => {
           maxWidth="1024px"
           height={16}
         >
-          <p>Dmytro Kurmaiev • © 2023</p>
+          <p>Dmytro Kurmaiev • © 2023 • ©️ Copyright, Little Lemon.</p>
+         
         </Flex>
       </footer>
     </Box>

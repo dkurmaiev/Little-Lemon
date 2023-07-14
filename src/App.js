@@ -1,19 +1,23 @@
-import './App.css';
+
+
 import { ChakraProvider } from "@chakra-ui/react";
+import Header from "./components/Header";
+import MenuSection from "./components/MenuSection";
+import Footer from "./components/Footer";
+
+
+
 
 
     function App() {
       return (
         <ChakraProvider>
-          <AlertProvider>
             <main>
               <Header />
-              <Nav />
-              <Main />
-              <Contactme />
+              <MenuSection />
               <Footer />
             </main>
-          </AlertProvider>
+          
         </ChakraProvider>
       );
     }
