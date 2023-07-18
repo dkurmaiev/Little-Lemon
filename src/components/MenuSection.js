@@ -3,6 +3,7 @@ import FullScreenSection from "./FullScreenSection";
 import { Box, Heading } from "@chakra-ui/react";
 import Dish from "./Dish";
 
+
 const menu = [
     {
         title: "Philadelphia $12",
@@ -79,7 +80,7 @@ const MenuSection = () => {
       >
         <Heading as="h1" id="MenuSection">
           Our Menu
-          
+
         </Heading>
         <Box
           display="grid"

@@ -1,6 +1,6 @@
-import React, { useEffect, useRef } from "react"; 
+import  {React, useEffect, useRef } from "react"; 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; 
-
+import{ Link, Route, Routes} from "react-router-dom"
 import { Box, HStack } from "@chakra-ui/react"; 
 import { 
     faFacebook, 
@@ -8,6 +8,9 @@ import {
     faTiktok, 
     faYoutube, 
    } from "@fortawesome/free-brands-svg-icons";  
+   
+
+   
  
 
 
@@ -104,6 +107,17 @@ import {
         ))}
     </HStack>
  </nav>
+ <><nav>
+          
+          <li>
+            <Link to="/">Homepage</Link>
+          </li>
+          <li>
+            <Link to="MenuSection">MenuSection</Link>
+          </li>
+         
+        
+      </nav></>
 
        </HStack> 
      </Box> 

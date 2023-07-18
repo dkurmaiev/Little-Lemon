@@ -1,10 +1,11 @@
 
-
+import{ Link, Route, Routes} from "react-router-dom"
 import { ChakraProvider } from "@chakra-ui/react";
-import Homepage from "./components/Homepage";
 import Header from "./components/Header";
-import MenuSection from "./components/MenuSection";
+import Homepage from "./components/Homepage";
 import Footer from "./components/Footer";
+import MenuSection from "./components/MenuSection";
+
 
 
 
@@ -12,14 +13,20 @@ import Footer from "./components/Footer";
 
     function App() {
       return (
-        <ChakraProvider>
-            <main>
-              <Homepage />
-              <Header />
-              <MenuSection />
-              <Footer />
-            </main>
+       
           
+        
+        <ChakraProvider>
+          <Routes>
+            <Route path="/" element={<Homepage />}></Route>
+            <Route path="/MenuSection" element={<MenuSection />}></Route>
+
+          </Routes>
+          <main>
+           <Header />
+            <Footer />
+          </main>
+
         </ChakraProvider>
       );
     }
