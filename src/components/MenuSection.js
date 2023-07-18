@@ -79,6 +79,7 @@ const MenuSection = () => {
       >
         <Heading as="h1" id="MenuSection">
           Our Menu
+          
         </Heading>
         <Box
           display="grid"

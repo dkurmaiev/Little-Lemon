@@ -1,6 +1,7 @@
 
 
 import { ChakraProvider } from "@chakra-ui/react";
+import Homepage from "./components/Homepage";
 import Header from "./components/Header";
 import MenuSection from "./components/MenuSection";
 import Footer from "./components/Footer";
@@ -13,6 +14,7 @@ import Footer from "./components/Footer";
       return (
         <ChakraProvider>
             <main>
+              <Homepage />
               <Header />
               <MenuSection />
               <Footer />

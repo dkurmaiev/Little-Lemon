@@ -1,6 +1,6 @@
 import { Heading, HStack, Image, Text, VStack } from "@chakra-ui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 const Dish = ({ title, description, imageSrc }) => {
   // Implement the UI for the Card component according to the instructions.
@@ -18,8 +18,8 @@ const Dish = ({ title, description, imageSrc }) => {
         <Heading as="h4" size="md">{title}</Heading>
         <Text color="#black" fontSize="lg">{description}</Text>
         <HStack fontSize="md" fontWeight="medium" >
-           <p>See more</p>
-          <FontAwesomeIcon icon={faArrowRight} size="1x" />  
+           <p>Add to Basket</p>
+          <FontAwesomeIcon icon={faCartShopping} size="1x" />  
       </HStack>
       </VStack>
       </VStack>

@@ -11,7 +11,7 @@ import {
  
 
 
-<img src="logo.png" alt="little lemon logo"></img>
+
  const social = [
     {
         icon: faFacebook,
@@ -31,6 +31,7 @@ import {
     },
  ];
  const Header = () => { 
+    
     const headerRef = useRef(null); 
     
     useEffect(() => { 
@@ -76,7 +77,7 @@ import {
         transitionProperty="transform" 
         transitionDuration=".3s" 
         transitionTimingFunction="ease-in-out" 
-        backgroundColor="#18181b" 
+        backgroundColor= "black" 
         ref={headerRef} 
       > 
         <Box color="white" maxWidth="1280px" margin="0 auto"> 
@@ -86,6 +87,7 @@ import {
             justifyContent="space-between" 
             alignItems="center" 
           > 
+    <img src="../images/LittleLemonLogo.jpg" alt = "LittleLemonLogo"  />
  <nav>
     {/* Add social media links based on the `socials` data */}
     <HStack spacing={8}>
@@ -102,18 +104,7 @@ import {
         ))}
     </HStack>
  </nav>
- <nav>
-           
-              {/* Add links to Menu section and Contact me section */}
-           <HStack spacing={8}> 
-             <a href="#projects" onClick={handleClick("MenuSection")}> 
-               Menu 
-             </a> 
-             <a href="#contactme" onClick={handleClick("contactme")}> 
-               Contact Me 
-             </a> 
-           </HStack> 
-         </nav> 
+
        </HStack> 
      </Box> 
    </Box> 
