@@ -1,6 +1,6 @@
 import  {React, useEffect, useRef } from "react"; 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; 
-import{ Link, Route, Routes} from "react-router-dom"
+import{ Link } from "react-router-dom"
 import { Box, HStack } from "@chakra-ui/react"; 
 import { 
     faFacebook, 
@@ -110,10 +110,13 @@ import {
  <><nav>
           
           <li>
-            <Link to="/">Homepage</Link>
+            <Link to="/">Home page</Link>
           </li>
           <li>
-            <Link to="MenuSection">MenuSection</Link>
+            <Link to="MenuSection">Menu</Link>
+          </li>
+          <li>
+            <Link to="BookingPage">Booking a table</Link>
           </li>
          
         
