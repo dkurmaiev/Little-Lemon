@@ -1,6 +1,9 @@
 import React, { useReducer } from 'react';
 import BookingForm from './BookingForm';
 import BookingSlot from './BookingSlot';
+import ConfirmedBooking from './ConfirmedBooking';
+import { useNavigate } from 'react-router-dom';
+import { submitAPI } from './api'; // Assuming you have the submitAPI function in api.js
 
 const reducer = (state, action) => {
   if (action.type === 'UPDATE_TIMES') {
@@ -22,7 +25,7 @@ const Main = () => {
 
   return (
     <div>
-      <h1>Reservation Form</h1>
+      <h1>Booking Form</h1>
       <BookingForm availableTimes={availableTimes} dispatch={dispatch} />
       <h2>Available Times:</h2>
       <ul>
