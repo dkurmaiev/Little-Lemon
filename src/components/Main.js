@@ -3,7 +3,7 @@ import BookingForm from './BookingForm';
 import BookingSlot from './BookingSlot';
 import ConfirmedBooking from './ConfirmedBooking';
 import { useNavigate } from 'react-router-dom';
-import { submitAPI } from './api'; // Assuming you have the submitAPI function in api.js
+import { submitAPI} from './SubmitAPI'; // Assuming you have the submitAPI function in api.js
 
 const reducer = (state, action) => {
   if (action.type === 'UPDATE_TIMES') {
@@ -22,11 +22,18 @@ const Main = () => {
     // Initialize availableTimes here
     return ['17:00', '18:00', '19:00', '20:00', '21:00', '22:00'];
   };
+  const handleSubmit = (formData) => {
+    // Implement the logic to submit the form data to the server
+    // For now, return true to simulate a successful reservation
+    return true;
+  };
+  
 
   return (
     <div>
       <h1>Booking Form</h1>
-      <BookingForm availableTimes={availableTimes} dispatch={dispatch} />
+      <BookingForm availableTimes={availableTimes} dispatch={dispatch} updateTimes={initializeTimes}
+        handleSubmit={handleSubmit} />
       <h2>Available Times:</h2>
       <ul>
         {availableTimes.map((time) => (
@@ -38,4 +45,3 @@ const Main = () => {
 };
 
 export default Main;
-

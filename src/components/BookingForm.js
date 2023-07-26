@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import Main from './Main';
 
-const BookingForm = ({ availableTimes, dispatch  }) => {
+const BookingForm = ({ availableTimes, dispatch, updateTimes, handleSubmit }) => {
   const [selectedDate, setSelectedDate] = useState('');
   const [selectedTime, setSelectedTime] = useState('');
   const [guests, setGuests] = useState(1);
   const [occasion, setOccasion] = useState('Birthday');
+  const [reservationStatus, setReservationStatus] = useState(null);
 
   const handleDateChange = (e) => {
     const newDate = e.target.value;
@@ -28,18 +28,28 @@ const BookingForm = ({ availableTimes, dispatch  }) => {
     setOccasion(newOccasion);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmitForm = async (e) => {
     e.preventDefault();
     const formData = {
-        selectedDate,
-        selectedTime,
-        guests,
-        occasion,
-      };
-    console.log('Selected Date:', selectedDate);
-    console.log('Selected Time:', selectedTime);
-    console.log('Number of Guests:', guests);
-    console.log('Occasion:', occasion);
+      selectedDate,
+      selectedTime,
+      guests,
+      occasion,
+    };
+
+    // Call the handleSubmit function passed as a prop
+    try {
+      const result = await handleSubmit(formData);
+      if (result) {
+        setReservationStatus('Table reserved');
+      } else {
+        setReservationStatus('Error, try again');
+      }
+    } catch (error) {
+      console.error(error);
+      setReservationStatus('Error, try again');
+    }
+
     setSelectedDate('');
     setSelectedTime('');
     setGuests(1);
@@ -56,6 +66,7 @@ const BookingForm = ({ availableTimes, dispatch  }) => {
     backgroundColor: 'white',
     boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
   };
+  
 
   const labelStyle = {
     fontSize: '16px',
@@ -91,7 +102,7 @@ const BookingForm = ({ availableTimes, dispatch  }) => {
   };
 
   return (
-    <form style={formStyle} onSubmit={handleSubmit}>
+    <form style={formStyle} onSubmit={handleSubmitForm}>
       <label htmlFor="res-date" style={labelStyle}>
         Choose date
       </label>
@@ -129,6 +140,9 @@ const BookingForm = ({ availableTimes, dispatch  }) => {
       </select>
 
       <input type="submit" value="Make Your Reservation" style={submitButtonStyle} />
+
+      {/* Display the reservation status */}
+      {reservationStatus && <p>{reservationStatus}</p>}
     </form>
   );
 };
