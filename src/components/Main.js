@@ -17,6 +17,7 @@ const reducer = (state, action) => {
 
 const Main = () => {
   const [availableTimes, dispatch] = useReducer(reducer, []);
+  
 
   const initializeTimes = () => {
     // Initialize availableTimes here
@@ -27,6 +28,7 @@ const Main = () => {
     // For now, return true to simulate a successful reservation
     return true;
   };
+    
   
 
   return (

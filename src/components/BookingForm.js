@@ -30,6 +30,10 @@ const BookingForm = ({ availableTimes, dispatch, updateTimes, handleSubmit }) =>
 
   const handleSubmitForm = async (e) => {
     e.preventDefault();
+    if (!selectedDate) {
+        setReservationStatus('No date is selected');
+        return;
+      }
     const formData = {
       selectedDate,
       selectedTime,
