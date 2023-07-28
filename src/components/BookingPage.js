@@ -1,20 +1,26 @@
 import React from 'react';
 import Main from './Main';
+import BackgroundImage from '../images/BackgroundImage.jpg';
+
 
 
 const BookingPage = () => {
   // Additional logic or state management specific to the BookingPage can be added here
 
   const pageStyle = {
-    backgroundColor: 'purple',
+    backgroundImage: `url(${BackgroundImage})`, // Set the background image
+    backgroundSize: 'cover', // Optional: adjust background image size
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',
+    backgroundColor:'purple',
     color: 'black',
     padding: '10px',
     minHeight: '100vh', // Ensure the component fills the screen vertically
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-  };
-
+  }; 
+  
   const headerStyle = {
     padding: '100px',
     textAlign: 'center',

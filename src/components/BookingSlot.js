@@ -15,7 +15,7 @@ const BookingSlot = ({ time }) => {
     fontWeight: 'bold',
     borderRadius: '4px',
     border: 'none',
-    backgroundColor: 'purple',
+    backgroundColor: '#a94b00',
     color: 'white',
     cursor: 'pointer',
   };
