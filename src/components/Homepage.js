@@ -6,8 +6,7 @@ const Name = "Little Lemon";
 const info1 = "When taste matters";
 const info2 = "Here you will find the best Japanese and European cuisine with home delivery";
 
-// Implement the UI for the LandingSection component according to the instructions.
-// Use a combination of Avatar, Heading and VStack components.
+
 const Homepage = () => (
   <FullScreenSection
     justifyContent="center"
@@ -15,7 +14,7 @@ const Homepage = () => (
     isDarkBackground
     backgroundColor="#2A4365"
   >
-    {/*Implement the UI for the LandingSection component*/}
+    
     <VStack spacing= {20}>
       <VStack spacing={4}>
          

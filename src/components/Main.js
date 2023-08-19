@@ -1,15 +1,13 @@
 import React, { useReducer } from 'react';
 import BookingForm from './BookingForm';
 import BookingSlot from './BookingSlot';
-import ConfirmedBooking from './ConfirmedBooking';
-import { useNavigate } from 'react-router-dom';
-import { submitAPI} from './SubmitAPI'; // Assuming you have the submitAPI function in api.js
+
 
 const reducer = (state, action) => {
   if (action.type === 'UPDATE_TIMES') {
-    // Implement the logic to update availableTimes based on the selected date
-    const { selectedDate } = action.payload;
-    // For now, return the same availableTimes regardless of the date
+    
+   
+    // return the same availableTimes regardless of the date
     return ['17:00', '18:00', '19:00', '20:00', '21:00', '22:00'];
   }
   return state;
@@ -20,12 +18,12 @@ const Main = () => {
   
 
   const initializeTimes = () => {
-    // Initialize availableTimes here
+    // Initialize availableTimes 
     return ['17:00', '18:00', '19:00', '20:00', '21:00', '22:00'];
   };
   const handleSubmit = (formData) => {
-    // Implement the logic to submit the form data to the server
-    // For now, return true to simulate a successful reservation
+    
+    // return true to simulate a successful reservation
     return true;
   };
     

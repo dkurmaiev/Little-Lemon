@@ -5,22 +5,22 @@ import BackgroundImage from '../images/BackgroundImage.jpg';
 
 
 const BookingPage = () => {
-  // Additional logic or state management specific to the BookingPage can be added here
+  
 
   const pageStyle = {
-    backgroundImage: `url(${BackgroundImage})`, // Set the background image
-    backgroundSize: 'cover', // Optional: adjust background image size
+    backgroundImage: `url(${BackgroundImage})`, 
+    backgroundSize: 'cover', 
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
     backgroundColor:'purple',
     color: 'black',
     padding: '10px',
-    minHeight: '100vh', // Ensure the component fills the screen vertically
+    minHeight: '100vh', 
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
   }; 
-  
+
   const headerStyle = {
     padding: '100px',
     textAlign: 'center',
@@ -35,11 +35,6 @@ const BookingPage = () => {
     padding: '10px',
   };
 
-  const footerStyle = {
-    padding: '10px',
-    textAlign: 'center',
-    fontSize: '14px',
-  };
 
   return (
     <div style={pageStyle}>
@@ -52,7 +47,7 @@ const BookingPage = () => {
         
         
          
-        {/* Add other components or elements specific to the BookingPage here */}
+       
       </main>
       
     </div>

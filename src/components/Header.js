@@ -60,16 +60,6 @@ import {
       } 
     }, []); 
     
-    const handleClick = (anchor) => () => { 
-      const id = `${anchor}-section`; 
-      const element = document.getElementById(id); 
-      if (element) { 
-        element.scrollIntoView({ 
-          behavior: "smooth", 
-          block: "start", 
-        }); 
-      } 
-    }; 
     return ( 
       <Box 
         position="fixed" 
@@ -92,7 +82,7 @@ import {
           > 
     <img src="../images/LittleLemonLogo.jpg" alt = "LittleLemonLogo"  />
  <nav>
-    {/* Add social media links based on the `socials` data */}
+    {/* Add social media links based on the `social` data */}
     <HStack spacing={8}>
         {social.map(({ icon, url})=>(
             <a

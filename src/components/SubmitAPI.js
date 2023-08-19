@@ -1,8 +1,8 @@
-// This is a simplified example of the submitAPI function
+
 const submitAPI = async (formData) => {
     try {
-      // Make an API request to submit the form data
-      // For example, using fetch() or axios.post() to send a POST request to the server
+      
+      
       const response = await fetch('https://example.com/submit', {
         method: 'POST',
         headers: {
@@ -11,7 +11,7 @@ const submitAPI = async (formData) => {
         body: JSON.stringify(formData),
       });
   
-      // Assuming the server responds with a JSON object containing the success status
+      
       const data = await response.json();
   
       // Check if the reservation was successful
@@ -27,6 +27,4 @@ const submitAPI = async (formData) => {
   };
   
   export default submitAPI;
-  
-  
   
