@@ -4,7 +4,7 @@ import FullScreenSection from "./FullScreenSection";
 
 const Name = "Little Lemon";
 const info1 = "When taste matters";
-const info2 = "Here you will find the best Japanese and European cuisine with home delivery";
+const info2 = "Here you will find the best Japanese and European cuisine with home delivery!";
 
 
 const Homepage = () => (

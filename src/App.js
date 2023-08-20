@@ -6,7 +6,6 @@ import Homepage from "./components/Homepage";
 import Footer from "./components/Footer";
 import MenuSection from "./components/MenuSection";
 import BookingPage from "./components/BookingPage";
-import Main from "./components/Main";
 import ConfirmedBooking from './components/ConfirmedBooking';
 
 
