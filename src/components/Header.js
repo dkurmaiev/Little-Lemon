@@ -8,6 +8,7 @@ import {
     faTiktok, 
     faYoutube, 
    } from "@fortawesome/free-brands-svg-icons";  
+   import logo from '../images/LittleLemonLogo.jpg';
    
 
    
@@ -80,7 +81,7 @@ import {
             justifyContent="space-between" 
             alignItems="center" 
           > 
-    <img src="../images/LittleLemonLogo.jpg" alt = "LittleLemonLogo"  />
+    <img src={logo} alt="Little Lemon Logo" />
  <nav>
     {/* Add social media links based on the `social` data */}
     <HStack spacing={8}>
