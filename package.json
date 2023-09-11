@@ -1,5 +1,5 @@
 {
-  "name": "Little-Lemon",
+  "name": "react-app01",
   "version": "0.1.0",
   "private": true,
   "homepage": "https://dkurmaiev.github.io/Little-Lemon",
@@ -31,8 +31,8 @@
   },
   "eslintConfig": {
     "extends": [
-      "Little-Lemon",
-      "Little-Lemon/jest"
+      "react-app01",
+      "react-app01/jest"
     ]
   },
   "browserslist": {
